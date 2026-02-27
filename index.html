@@ -46,7 +46,7 @@
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1">
                     <li><button>Home</button></li>
-                    <li><button>Product</button></li>
+                    <li><button><a href="./products.html">Products</a></button></li>
                     <li><button>About</button></li>
                     <li><button>Contact</button></li>
                 </ul>
@@ -66,7 +66,7 @@
                     <ul tabindex="-1"
                         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                         <li><button>Home</button></li>
-                        <li><button>Product</button></li>
+                        <li><button><a href="./products.html">Products</a></button></li>
                         <li><button>About</button></li>
                         <li><button>Contact</button></li>
                     </ul>
@@ -87,7 +87,71 @@
             </div>
         </div>
     </div>
-    <div id="products-container"></div>
+    <div class="features">
+        <div class="justify-end card-action">
+            <h3>Why Choose Us</h3>
+            <p>We Provide the best shopping Experience with to-notch services</p>
+        </div>
+        <div class="flex gap-5 ">
+            <div class="card card-border bg-base-100 w-96">
+                <div class="card-body">
+                    <h2 class="card-title">Fast Delivey</h2>
+                    <p>Get your orders delivered to your doorstep quickly and efficiently</p>
+                </div>
+            </div>
+            <div class="card card-border bg-base-100 w-96">
+                <div class="card-body">
+                    <h2 class="card-title">24/7 Support</h2>
+                    <p>Our support teams is available around the clock to assist you</p>
+                </div>
+            </div>
+            <div class="card card-border bg-base-100 w-96">
+                <div class="card-body">
+                    <h2 class="card-title">Secure Payment</h2>
+                    <p>Experience safe and secure transaction with out encrypted payment systems</p>
+                </div>
+            </div>
+            <div class="card card-border bg-base-100 w-96">
+                <div class="card-body">
+                    <h2 class="card-title">Easy returns</h2>
+                    <p>Not satisfied? Return you products easily within 30 days</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="trending-now">
+        <h3 class="m-6 text-6xl">Trending Now</h3>
+        
+            <div id="trending-products" class="card bg-base-100 w-96 shadow-sm">
+                <figure>
+                    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Title</h2>
+                    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                    <div class="card-actions justify-end">
+                        <!--  Modal -->
+                        <!-- Open the modal using ID.showModal() method -->
+                        <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+                        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                            <div class="modal-box">
+                                <h3 class="text-lg font-bold">Full title Dynamically</h3>
+                                <p class="py-4">Full Description Dynamically</p>
+                                <div class="modal-action">
+                                    <form method="dialog">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        <button class="btn">Buy Now</button>
+                                        <button class="btn">Add to cart</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
 </body>
 <!--  -->
 <footer class="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4 bg-zinc-950">
@@ -98,6 +162,7 @@
                 <br> and lifestyle needs. Quality products, fast <br>
                 delivery, and excellent support
             </p>
+
             <nav class="text-amber-50">
                 <h6 class="footer-title">QUICK LINKS</h6>
                 <a class="link link-hover">HOME</a>
@@ -120,6 +185,9 @@
             </div>
         </div>
     </nav>
+</footer>
+<footer>
+
 </footer>
 <script src="script.js"></script>
 

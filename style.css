@@ -1,0 +1,19 @@
+.products-container {
+    max-width: 1160Px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px;
+    height: 100%;
+}
+
+.product-card p {
+    text-align: justify;
+}
