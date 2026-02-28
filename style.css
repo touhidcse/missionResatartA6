@@ -1,5 +1,5 @@
-.products-container {
-    max-width: 1160Px;
+#products-container{
+    max-width: 1160Px; 
     margin: 50px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -16,4 +16,5 @@
 
 .product-card p {
     text-align: justify;
+    
 }
