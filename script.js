@@ -54,19 +54,19 @@ const disPlayProducts = (products) => {
 
 }
 
+
 // display category
 
 const disPlayCatagories = (products) => {
     console.log("IN Display Button function")
     const categoriesContainer = document.getElementById("categories-container");
     categoriesContainer.innerHTML = "";
+    const allButton= document.createElement("button");
+    allButton.innerHTML='All';
+    categoriesContainer.appendChild(allButton);
     products.forEach((product) => {
         const categoryButton = document.createElement("button");
         categoryButton.innerHTML = product.category;
-        categories= product.category;
-        console.log(product.category);
         categoriesContainer.appendChild(categoryButton);
     });
 }
-
-

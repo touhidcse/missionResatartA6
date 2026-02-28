@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- title and logo -->
-    <!-- <title>English Janala | Best platform for learning</title>
-    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon"> -->
+    <title>E-Commerce Application Design</title>
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -39,13 +37,12 @@
 
         <div class="navbar bg-base-100 shadow-sm">
             <div class="navbar-start">
-                <a href=""><span class="text-blue-600">SwiftCart</span></a>
-
+                <a href="./index.html"><span class="text-blue-600">SwiftCart</span></a>
             </div>
 
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1">
-                    <li><button>Home</button></li>
+                    <li><button><a href="./index.html">Home</a></button></li>
                     <li><button><a href="./products.html">Products</a></button></li>
                     <li><button>About</button></li>
                     <li><button>Contact</button></li>
@@ -54,7 +51,6 @@
             <div class="navbar-end">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <!-- shopping card box -->
-
                 <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -65,7 +61,7 @@
                     </div>
                     <ul tabindex="-1"
                         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><button>Home</button></li>
+                        <li><button><a href="./index.html">Home</a></button></li>
                         <li><button><a href="./products.html">Products</a></button></li>
                         <li><button>About</button></li>
                         <li><button>Contact</button></li>
@@ -92,26 +88,26 @@
             <h3>Why Choose Us</h3>
             <p>We Provide the best shopping Experience with to-notch services</p>
         </div>
-        <div class="flex gap-5 ">
-            <div class="card card-border bg-base-100 w-96">
+        <div class="flex gap-5 md:grid-cols-1">
+            <div class="card card-border bg-base-100 max-w-80">
                 <div class="card-body">
                     <h2 class="card-title">Fast Delivey</h2>
                     <p>Get your orders delivered to your doorstep quickly and efficiently</p>
                 </div>
             </div>
-            <div class="card card-border bg-base-100 w-96">
+            <div class="card card-border bg-base-100 max-w-80">
                 <div class="card-body">
                     <h2 class="card-title">24/7 Support</h2>
                     <p>Our support teams is available around the clock to assist you</p>
                 </div>
             </div>
-            <div class="card card-border bg-base-100 w-96">
+            <div class="card card-border bg-base-100 max-w-80">
                 <div class="card-body">
                     <h2 class="card-title">Secure Payment</h2>
                     <p>Experience safe and secure transaction with out encrypted payment systems</p>
                 </div>
             </div>
-            <div class="card card-border bg-base-100 w-96">
+            <div class="card card-border bg-base-100 max-w-80">
                 <div class="card-body">
                     <h2 class="card-title">Easy returns</h2>
                     <p>Not satisfied? Return you products easily within 30 days</p>
@@ -121,36 +117,36 @@
     </div>
     <div class="trending-now">
         <h3 class="m-6 text-6xl">Trending Now</h3>
-        
-            <div id="trending-products" class="card bg-base-100 w-96 shadow-sm">
-                <figure>
-                    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title">Title</h2>
-                    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                    <div class="card-actions justify-end">
-                        <!--  Modal -->
-                        <!-- Open the modal using ID.showModal() method -->
-                        <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
-                        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-                            <div class="modal-box">
-                                <h3 class="text-lg font-bold">Full title Dynamically</h3>
-                                <p class="py-4">Full Description Dynamically</p>
-                                <div class="modal-action">
-                                    <form method="dialog">
-                                        <!-- if there is a button in form, it will close the modal -->
-                                        <button class="btn">Buy Now</button>
-                                        <button class="btn">Add to cart</button>
-                                    </form>
-                                </div>
+
+        <div id="trending-products" class="card bg-base-100 w-96 shadow-sm">
+            <figure>
+                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Title</h2>
+                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                <div class="card-actions justify-end">
+                    <!--  Modal -->
+                    <!-- Open the modal using ID.showModal() method -->
+                    <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+                    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                        <div class="modal-box">
+                            <h3 class="text-lg font-bold">Full title Dynamically</h3>
+                            <p class="py-4">Full Description Dynamically</p>
+                            <div class="modal-action">
+                                <form method="dialog">
+                                    <!-- if there is a button in form, it will close the modal -->
+                                    <button class="btn">Buy Now</button>
+                                    <button class="btn">Add to cart</button>
+                                </form>
                             </div>
-                        </dialog>
-                        <button class="btn btn-primary">Buy Now</button>
-                    </div>
+                        </div>
+                    </dialog>
+                    <button class="btn btn-primary">Buy Now</button>
                 </div>
             </div>
-        
+        </div>
+
     </div>
 </body>
 <!--  -->
@@ -165,8 +161,8 @@
 
             <nav class="text-amber-50">
                 <h6 class="footer-title">QUICK LINKS</h6>
-                <a class="link link-hover">HOME</a>
-                <a class="link link-hover">PRODUCTS</a>
+                <a href="./index.html" class="link link-hover">HOME</a>
+                <a href="./products.html" class="link link-hover">PRODUCTS</a>
                 <a class="link link-hover">ABOUT</a>
                 <a class="link link-hover">CONTACT</a>
             </nav>
@@ -186,8 +182,18 @@
         </div>
     </nav>
 </footer>
-<footer>
-
+<footer class="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4 bg-zinc-950 text-amber-50">
+    <div class="flex sm:flex-1">
+        <hr>
+        <h3>© 2026 SwiftCart, inc. All rights reserved</h3>
+        <div>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-solid fa-envelope"></i>
+        </div>
+    </div>
 </footer>
 <script src="script.js"></script>
 
