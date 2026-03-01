@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
+    <title>E-Commerce Application Design</title>
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -23,18 +24,24 @@
 
 <body>
     <header>
-        <div class="bg-black text-white flex justify-around justify-items-start">
-            <ul class="flex justify-around gap-7">
-                <li><i class="fa-solid fa-border-all"></i></li>
-                <li>AI</li>
-            </ul>
-            <ul class="flex justify-around gap-16">
-                <li>E-Commerce Application Design</li>
-                <li><button class="bg-blue-700">View Chat</button></li>
-            </ul>
+        <div class="bg-black text-white px-3 py-2">
+            <div class="grid grid-cols-3 items-center">
+                <div class="flex gap-3">
+                    <button><i class="fa-solid fa-border-all"></i></button>
+                    <button>AI</button>
+                </div>
+                <div class="text-center">
+                    <h3>E-commerce Application Design</h3>
+                </div>
+                <div class=" justify-self-end">
+                    <i class="fa-solid fa-handshake"></i>
+                    <button class="bg-blue-700 px-3 py-2">Share</button>
+                </div>
+            </div>
         </div>
 
-        <div class="navbar bg-base-100 shadow-sm">
+
+        <div class="navbar bg-base-100 max-w-5xl mx-auto">
             <div class="navbar-start">
                 <a href="./index.html"><span class="text-blue-600">SwiftCart</span></a>
             </div>
@@ -69,53 +76,52 @@
             </div>
         </div>
     </header>
+    <h3 class="text-3xl flex justify-end">Our Products</h3>
+    <div id="categories-container">
+        <button class="btn" onClick="loadAllProducts()">All</button>
+    </div>
+    <div id="products-container" class="products-container">
 
-    <body>
-        <h3 class="text-3xl flex justify-end">Our Products</h3>
-        <div id="categories-container">
-            <button class="btn" onClick="loadAllProducts()">All</button>
-        </div>
-        <div id="products-container" class="products-container">
+    </div>
 
-        </div>
+</body>
+<footer class="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4 bg-zinc-950">
+    <nav class="max-w-5xl mx-auto md:place-self-center md:justify-self-end">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
+            <p class="text-amber-50 px-2 py-3"><span class="text-blue-600 px-2 py-3">SwiftCart</span> <br> your one stop
+                for all your
+                fashion and lifestyle needs. Quality products, fast
+                delivery, and excellent support
+            </p>
 
-    </body>
-    <footer class="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4 bg-zinc-950">
-        <nav class="md:place-self-center md:justify-self-end">
-            <div class="grid grid-flow-col gap-8">
-                <p class="text-amber-50"><span class="text-blue-600">SwiftCart</span> <br> your one stop for all your
-                    fashion
-                    <br> and lifestyle needs. Quality products, fast <br>
-                    delivery, and excellent support
-                </p>
-
-                <nav class="text-amber-50">
-                    <h6 class="footer-title">QUICK LINKS</h6>
-                    <a href="./index.html" class="link link-hover">HOME</a>
-                    <a href="./products.html" class="link link-hover">PRODUCTS</a>
-                    <a class="link link-hover">ABOUT</a>
-                    <a class="link link-hover">CONTACT</a>
-                </nav>
-                <nav class="text-amber-50">
-                    <h6 class="footer-title">SUPPORT</h6>
-                    <a class="link link-hover">FAQ</a>
-                    <a class="link link-hover">Shipping</a>
-                    <a class="link link-hover">Returns</a>
-                    <a class="link link-hover">Privacy Policy</a>
-                </nav>
-                <div class="text-amber-50">
-                    <h6 class="text-amber-50">Subscribe To our Newsletter</h6>
-                    <p>The latest news, articles, and resources, <br>sent to your inbox weekly</p>
-                    <textarea name="" id="" cols="6" rows="1" class="bg-amber-50"></textarea>
-                    <button type="button" class="bg-blue-800 text-amber-50">Subscribe</button>
-                </div>
+            <nav class="text-amber-50 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 px-2 py-3">
+                <h6 class="footer-title px-2 py-3">QUICK LINKS</h6>
+                <a href="./index.html" class="link link-hover px-2 py-3">HOME</a>
+                <a href="./products.html" class="link link-hover px-2 py-3">PRODUCTS</a>
+                <a class="link link-hover px-2 py-3">ABOUT</a>
+                <a class="link link-hover px-2 py-3">CONTACT</a>
+            </nav>
+            <nav class="text-amber-50 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 px-2 py-3">
+                <h6 class="footer-title px-2 py-3">SUPPORT</h6>
+                <a class="link link-hover px-2 py-3">FAQ</a>
+                <a class="link link-hover px-2 py-3">Shipping</a>
+                <a class="link link-hover px-2 py-3">Returns</a>
+                <a class="link link-hover px-2 py-3">Privacy Policy</a>
+            </nav>
+            <div class="text-amber-50 px-2 py-3">
+                <h6 class="text-amber-50 px-2 py-3">Subscribe To our Newsletter</h6>
+                <p class="px-2 py-3">The latest news, articles, and resources, <br>sent to your inbox weekly</p>
+                <input type="text" class="bg-white">
+                <button type="button" class="bg-blue-800 text-amber-50">Subscribe</button>
             </div>
-        </nav>
-    </footer>
-    <footer class="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4 bg-zinc-950 text-amber-50">
-        <div class="flex sm:flex-1">
-            <hr>
-            <h3>© 2026 SwiftCart, inc. All rights reserved</h3>
+        </div>
+    </nav>
+</footer>
+<footer class="footer bg-base-200 text-base-content border-base-300 border-t bg-zinc-950 text-amber-50">
+    <div class="max-w-5xl mx-auto">
+        <hr class="mx-56">
+        <div class="grid grid-cols-1 md:flex  lg:flex xl:flex justify-items-end">
+            <h3 class="text-1xl">© 2026 SwiftCart, inc. All rights reserved</h3>
             <div>
                 <i class="fa-brands fa-facebook-f"></i>
                 <i class="fa-brands fa-twitter"></i>
@@ -124,7 +130,9 @@
                 <i class="fa-solid fa-envelope"></i>
             </div>
         </div>
-    </footer>
-    <script src="script.js"></script>
+    </div>
+
+</footer>
+<script src="script.js"></script>
 
 </html>

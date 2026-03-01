@@ -58,4 +58,3 @@ const displayTrending = (products) => {
 
 loadAllProducts();
 
-
