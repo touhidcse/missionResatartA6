@@ -4,9 +4,7 @@ const loadAllProducts = () => {
         .then(data => {
             // console.log(data)
             disPlayProducts(data);
-            // allCategories(data);
             disPlayCatagories(data);
-            displayTrending(data);
         });
 }
 // category
@@ -41,13 +39,25 @@ const disPlayProducts = (products) => {
     products.forEach((product) => {
         //2. Create HTML Element
         const productCard = document.createElement("div");
-        productCard.innerHTML = `<div class="product-card">
-            <img src=${product.image}>
-            <p style="display:flex;justify-content: space-between;flex-grow:1"> <span>${product.category} </span> ${product.rating.rate} (${product.rating.count})<span></span></p>
-            <h2>${product.title}</h2>
-            <p>${product.price}</p>
-            <button>Detalis</button>&nbsp&nbsp <button>Add to Cart</button>
-        </div>`;
+        productCard.innerHTML = `<div class="card w-64 bg-base-100 shadow-lg">
+                 <div class="bg-gray-300 flex justify-center items-center h-48">
+                     <figure class="w-40 h-40">
+                         <img src="${product.image}" class="w-full h-full object-contain" />
+                     </figure>
+                </div>
+                <div class="card-body flex flex-col justify-between">
+                    <div>
+                        <p class="flex text-sm"> <span>${product.category}</span> ${product.rating.rate} (${product.rating.count})</p>
+                        <h2 class="card-title line-clamp-1">${product.title}</h2>
+                        <p>${product.price}</p>
+                    </div>
+
+                    <div class="card-actions flex">
+                        <button class="btn bg-white"><i class="fa-regular fa-eye"></i>Details</button>
+                        <button class="btn btn-info"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                    </div>
+                 </div>
+            </div>`;
 
         //3. add to the container
         productContainer.appendChild(productCard);

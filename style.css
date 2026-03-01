@@ -1,12 +1,12 @@
-#products-container{
+/* #products-container{
     max-width: 1160Px; 
     margin: 50px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
-}
+} */
 
-.product-card {
+/* .product-card {
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 10px;
@@ -17,7 +17,7 @@
 .product-card p {
     text-align: justify;
     
-}
+} */
 /* .features{
     padding-bottom: 2rem;
     padding-top: 2rem;
