@@ -83,12 +83,12 @@
             </div>
         </div>
     </div>
-    <div class="features">
-        <div class="justify-end card-action">
-            <h3>Why Choose Us</h3>
-            <p>We Provide the best shopping Experience with to-notch services</p>
+    <div class="features pt-2 pb-2 pl-40 pr-40 card card-border bg-gray-100">
+        <div class="card grid justify-around">
+            <h3 class="pb-6 text-5xl text-black items-center">Why Choose Us</h3>
+            <p class="pb-4">We Provide the best shopping Experience with to-notch services</p>
         </div>
-        <div class="flex gap-5 md:grid-cols-1">
+        <div class="grid grid-cols-1  gap-5 md:grid-cols-2 lg:grid-cols-3">
             <div class="card card-border bg-base-100 max-w-80">
                 <div class="card-body">
                     <h2 class="card-title">Fast Delivey</h2>
@@ -115,39 +115,19 @@
             </div>
         </div>
     </div>
-    <div class="trending-now">
-        <h3 class="m-6 text-6xl">Trending Now</h3>
+    <section class="pt-2 pb-2 pl-40 pr-40">
+        <div class="trending-now">
+            <h3 class="m-6 text-6xl">Trending Now</h3>
 
-        <div id="trending-products" class="card bg-base-100 w-96 shadow-sm">
-            <figure>
-                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-                <h2 class="card-title">Title</h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div class="card-actions justify-end">
-                    <!--  Modal -->
-                    <!-- Open the modal using ID.showModal() method -->
-                    <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
-                    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-                        <div class="modal-box">
-                            <h3 class="text-lg font-bold">Full title Dynamically</h3>
-                            <p class="py-4">Full Description Dynamically</p>
-                            <div class="modal-action">
-                                <form method="dialog">
-                                    <!-- if there is a button in form, it will close the modal -->
-                                    <button class="btn">Buy Now</button>
-                                    <button class="btn">Add to cart</button>
-                                </form>
-                            </div>
-                        </div>
-                    </dialog>
-                    <button class="btn btn-primary">Buy Now</button>
-                </div>
+
+
+
+            <div id="products-container" class="products-container">
+
             </div>
-        </div>
 
-    </div>
+        </div>
+    </section>
 </body>
 <!--  -->
 <footer class="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4 bg-zinc-950">
@@ -195,6 +175,7 @@
         </div>
     </div>
 </footer>
-<script src="script.js"></script>
+<!-- <script src="script.js"></script> -->
+<script src="index.js"></script>
 
 </html>

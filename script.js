@@ -6,6 +6,7 @@ const loadAllProducts = () => {
             disPlayProducts(data);
             // allCategories(data);
             disPlayCatagories(data);
+            displayTrending(data);
         });
 }
 // category
@@ -61,8 +62,8 @@ const disPlayCatagories = (products) => {
     console.log("IN Display Button function")
     const categoriesContainer = document.getElementById("categories-container");
     categoriesContainer.innerHTML = "";
-    const allButton= document.createElement("button");
-    allButton.innerHTML='All';
+    const allButton = document.createElement("button");
+    allButton.innerHTML = 'All';
     categoriesContainer.appendChild(allButton);
     products.forEach((product) => {
         const categoryButton = document.createElement("button");
