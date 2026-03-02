@@ -54,19 +54,14 @@
                     <li><button>Contact</button></li>
                 </ul>
             </div>
-            <div class="navbar-end">
+            <div class="navbar-end -ml-10">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <!-- shopping card box -->
                 <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h8m-8 6h16" />
-                        </svg>
-                    </div>
-                    <ul tabindex="-1"
-                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                    <label tabindex="0" class="btn btn-ghost lg:hidden">
+                        ☰
+                    </label>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content w-auto bg-blue-50">
                         <li><button><a href="./index.html">Home</a></button></li>
                         <li><button><a href="./products.html">Products</a></button></li>
                         <li><button>About</button></li>
@@ -80,7 +75,8 @@
     <div id="categories-container">
         <button class="btn" onClick="loadAllProducts()">All</button>
     </div>
-    <div id="products-container" class="max-w-5xl mx-auto sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+    <div id="products-container"
+        class="max-w-5xl mx-auto gap-10 sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 ">
 
     </div>
 

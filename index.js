@@ -39,9 +39,9 @@ const displayTrending = (products) => {
     products.slice(0, 3).forEach((product) => {
         //2. Create HTML Element
         const productCard = document.createElement("div");
-        productCard.innerHTML = `<div class="card w-64 bg-base-100 shadow-lg">
+        productCard.innerHTML = `<div class="card min-w-80 bg-white border-b-amber-50 shadow-lg my-5">
                  <div class="bg-gray-300 flex justify-center items-center h-48">
-                     <figure class="w-40 h-40">
+                     <figure class="w-40 h-44">
                          <img src="${product.image}" class="w-full h-full object-contain" />
                      </figure>
                 </div>
@@ -49,11 +49,11 @@ const displayTrending = (products) => {
                     <div>
                         <p class="flex text-sm"> <span>${product.category}</span> ${product.rating.rate} (${product.rating.count})</p>
                         <h2 class="card-title line-clamp-1">${product.title}</h2>
-                        <p>${product.price}</p>
+                        <p class="card-title">${product.price}</p>
                     </div>
 
-                    <div class="card-actions flex">
-                        <button class="btn bg-white"><i class="fa-regular fa-eye"></i>Details</button>
+                    <div class="card-actions flex gap-5 justify-between">
+                        <button class="btn bg-amber-100"><i class="fa-regular fa-eye"></i>Details</button>
                         <button class="btn btn-info"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
                     </div>
                  </div>
