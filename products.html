@@ -72,14 +72,37 @@
         </div>
     </header>
     <h3 class="text-3xl flex justify-center">Our Products</h3>
-    <div id="categories-container">
-        <button class="btn" onClick="loadAllProducts()">All</button>
+    <div id="categories-container" class="max-w-2xl mx-auto ite">
+        <!-- <button class="btn" onClick="loadAllProducts()">All</button>
+        <button class="btn" onClick="loadMenProducts()">Men's clothing</button> -->
     </div>
     <div id="products-container"
         class="max-w-5xl mx-auto gap-10 sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 ">
 
     </div>
+    <dialog id="product_modal" class="modal">
+        <div class="modal-box">
+            <h3 id="modal-title" class="font-bold text-lg"></h3>
 
+            <!-- <img id="modal-image" class="w-full h-48 object-contain my-3" /> -->
+
+            <p id="modal-description" class="text-sm"></p>
+
+            <div class="flex justify-between mt-3">
+                <p class="font-semibold">Price: $<span id="modal-price"></span></p>
+                <p class="text-xs text-gray-500">
+                    Rating: <span id="modal-rating"></span>
+                </p>
+            </div>
+
+            <div class="modal-action">
+                <form method="dialog">
+                    <button class="btn">Buy Now</button>
+                    <button class="btn">Add to cart</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
 </body>
 <footer class="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4 bg-zinc-950">
     <nav class="max-w-5xl mx-auto md:place-self-center md:justify-self-end">

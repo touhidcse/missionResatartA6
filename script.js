@@ -3,39 +3,18 @@ const loadAllProducts = () => {
         .then(res => res.json())
         .then(data => {
             // console.log(data)
+            //allCategories(data);
             disPlayProducts(data);
             disPlayCatagories(data);
         });
 }
-// category
-// : 
-// "men's clothing"
-// description
-// : 
-// "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday"
-// id
-// : 
-// 1
-// image
-// : 
-// "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png"
-// price
-// : 
-// 109.95
-// rating
-// : 
-// {rate: 3.9, count: 120}
-// title
-// : 
-// "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
 
-
-
+// products.filter(product=>product.category==="women's clothing").forEach((product) =>
 const disPlayProducts = (products) => {
     //1. Get the container and empty the container
     const productContainer = document.getElementById("products-container");
     productContainer.innerHTML = "";
-
+    
     products.forEach((product) => {
         //2. Create HTML Element
         const productCard = document.createElement("div");
@@ -53,31 +32,58 @@ const disPlayProducts = (products) => {
                     </div>
 
                     <div class="card-actions flex gap-5 justify-between">
-                        <button class="btn bg-amber-100"><i class="fa-regular fa-eye"></i>Details</button>
+                        <button class="btn btn-info bg-amber-100"><i class="fa-regular fa-eye"></i>Details</button>
                         <button class="btn btn-info"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
                     </div>
                  </div>
             </div>`;
+        // DETAILS BUTTON EVENT
+        productCard.querySelector(".btn-info").onclick = () => {
+            openProductModal(product);
+        };
 
         //3. add to the container
         productContainer.appendChild(productCard);
     })
+
 
 }
 
 
 // display category
 
+
 const disPlayCatagories = (products) => {
     console.log("IN Display Button function")
     const categoriesContainer = document.getElementById("categories-container");
     categoriesContainer.innerHTML = "";
     const allButton = document.createElement("button");
-    allButton.innerHTML = 'All';
+    allButton.innerText = 'All';
     categoriesContainer.appendChild(allButton);
-    products.forEach((product) => {
+    allButton.classList.add("btn","btn-primary","m-2");
+    allButton.onclick=()=>{disPlayProducts(products)}
+    const categoris=[...new Set(products.map(product=>product.category))];
+    categoris.forEach((category) => {
         const categoryButton = document.createElement("button");
-        categoryButton.innerHTML = product.category;
+        categoryButton.classList.add("btn","btn-primary","m-2")
+        categoryButton.innerText =category;
+
+        categoryButton.onclick=()=>{const filterProducts=products.filter(product=>product.category===category)
+            disPlayProducts(filterProducts);
+        }
         categoriesContainer.appendChild(categoryButton);
     });
 }
+
+const openProductModal = (product) => {
+    document.getElementById("modal-title").innerText = product.title;
+    // document.getElementById("modal-image").src = product.image;
+    document.getElementById("modal-description").innerText = product.description;
+    document.getElementById("modal-price").innerText = product.price;
+    document.getElementById("modal-rating").innerText = product.rating.rate;
+
+    document.getElementById("product_modal").showModal();
+};
+
+loadAllProducts();
+// disPlayCatagories();
